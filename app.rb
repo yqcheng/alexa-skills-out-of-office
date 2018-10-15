@@ -106,7 +106,7 @@ class CustomHandler < AlexaSkillsRuby::Handler
     end
     logger.info 'BackIn processed'
     update_status "BACK_IN", duration
-end
+  end
 
 end
 
