@@ -156,6 +156,17 @@ class CustomHandler < AlexaSkillsRuby::Handler
     update_status "BACK_IN", duration
   end
 
+  on_intent("YAAAAY") do
+		# add a response to Alexa
+    response.set_output_speech_text("I've updated your status to YAAAAY ")
+		# create a card response in the alexa app
+    response.set_simple_card("Out of Office App", "Status is YAAAAY.")
+		# log the output if needed
+    logger.info 'YAAAAY processed'
+		# send a message to slack
+    update_status "YAAAAY"
+  end
+
 end
 
 # ----------------------------------------------------------------------
