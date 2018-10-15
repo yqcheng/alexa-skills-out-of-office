@@ -45,6 +45,8 @@ def get_message_for status, duration
     message = ENV['APP_USER'].to_s + " has left for the day. Check back tomorrow."
   elsif status == "DO_NOT_DISTURB"
     message = ENV['APP_USER'].to_s + " is busy. Please do not disturb."
+  elsif status == "YAAAAY"
+    message = ENV['APP_USER'].to_s + " wants to tell you that she is happy."
   end
 
 	# return the appropriate message
